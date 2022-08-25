@@ -1,0 +1,85 @@
+html {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	background: #2ecc71;
+}
+
+.container {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background: url('robot1.gif') 300px center/ contain no-repeat;
+}
+
+button {
+	cursor: pointer;
+	width: 150px;
+	height: 60px;
+	font-family: 'Courier New', Courier, monospace;
+	font-style: 20px;
+	color: white;
+	outline: none;
+	background-color: #e67e22;
+	border: none;
+	border-radius: 5px;
+	box-shadow: 2px 2px 15px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+	filter: brightness(90%);
+}
+
+button:active {
+	transform: scale(.97);
+}
+
+button:disabled {
+	cursor: default;
+	filter: brightness(30%);
+}
+
+button:disabled:active {
+	transform: scale(1);
+}
+
+.jokeText {
+	padding: 7px;
+	position: absolute;
+	right: 70px;
+	background-color: #CCFFFF;
+	border-radius: 15px;
+	max-width: 330px;
+	overflow: hidden;
+	font-size: 17px;
+}
+
+@media screen and (max-width: 1000px) {
+	.container {
+		background-size: 300px 400px;
+		background-position: right;
+	}
+
+	.jokeText {
+		left: 10px;
+		bottom: 10px;
+		max-width: 150px;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.container {
+		justify-content: space-between;
+		flex-direction: row;
+	}
+
+	button {
+		margin: 20px 0px 0px 20px;
+		align-self: flex-start;
+	}
+}
